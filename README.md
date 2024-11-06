@@ -14,7 +14,8 @@ npm start
 ```bash
 cd front
 npm install
-npm start
+# npm start
+npm run dev
 ```
 
 3. Accéder à l'application via le navigateur
