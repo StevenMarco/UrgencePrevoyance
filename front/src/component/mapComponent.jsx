@@ -34,6 +34,23 @@ const MapComponent = () => {
     }
   };
 
+  const handleGeolocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setCoordinates({ lat: latitude, lon: longitude });
+          mapRef.current.setView([latitude, longitude], 17); // Centrer la carte sur la position
+        },
+        (error) => {
+          alert("Erreur de géolocalisation: " + error.message);
+        }
+      );
+    } else {
+      alert("La géolocalisation n'est pas supportée par votre navigateur.");
+    }
+  };
+
   return (
     <div
       style={{
@@ -64,6 +81,12 @@ const MapComponent = () => {
             style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer" }}
           >
             Obtenir les coordonnées
+          </button>
+          <button
+            onClick={handleGeolocation}
+            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer", marginLeft: "10px" }}
+          >
+            Géolocalisation
           </button>
         </div>
         <MapContainer
