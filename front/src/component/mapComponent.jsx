@@ -6,6 +6,11 @@ const MapComponent = () => {
   const [address, setAddress] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [coordinates, setCoordinates] = useState(null);
+  const [environmentData, setEnvironmentData] = useState({
+    coastal: false,
+    farmlands: false,
+    woodlands: false,
+  });
   const mapRef = useRef();
 
   const handleAddressChange = (e) => {
@@ -25,12 +30,36 @@ const MapComponent = () => {
       if (data.length > 0) {
         const { lat, lon } = data[0];
         setCoordinates({ lat, lon });
-        mapRef.current.setView([lat, lon], 17); // Centrer la carte sur les nouvelles coordonnées
+        mapRef.current.setView([lat, lon]); // Centrer la carte sur les nouvelles coordonnées
+        checkEnvironmentData(lat, lon);
       } else {
         alert("Adresse non trouvée");
       }
     } catch (error) {
       console.error("Erreur lors de la récupération des coordonnées:", error);
+    }
+  };
+
+  const checkEnvironmentData = async (lat, lon) => {
+    const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];(way(around:500,${lat},${lon})[natural=coastline];way(around:500,${lat},${lon})[landuse=farmland];way(around:500,${lat},${lon})[landuse=forest];);out body;`;
+    try {
+      const response = await fetch(overpassUrl);
+      const data = await response.json();
+      const coastal = data.elements.some(
+        (el) => el.tags.natural === "coastline"
+      );
+      const farmlands = data.elements.some(
+        (el) => el.tags.landuse === "farmland"
+      );
+      const woodlands = data.elements.some(
+        (el) => el.tags.landuse === "forest"
+      );
+      setEnvironmentData({ coastal, farmlands, woodlands });
+    } catch (error) {
+      console.error(
+        "Erreur lors de la vérification des données environnementales:",
+        error
+      );
     }
   };
 
@@ -50,14 +79,24 @@ const MapComponent = () => {
             value={address}
             onChange={handleAddressChange}
             placeholder="Entrez votre adresse"
-            style={{ width: "300px", padding: "10px", fontSize: "1em", marginBottom: "10px" }}
+            style={{
+              width: "300px",
+              padding: "10px",
+              fontSize: "1em",
+              marginBottom: "10px",
+            }}
           />
           <input
             type="text"
             value={postalCode}
             onChange={handlePostalCodeChange}
             placeholder="Entrez votre code postal"
-            style={{ width: "300px", padding: "10px", fontSize: "1em", marginBottom: "10px" }}
+            style={{
+              width: "300px",
+              padding: "10px",
+              fontSize: "1em",
+              marginBottom: "10px",
+            }}
           />
           <button
             onClick={getCoordinates}
@@ -81,6 +120,20 @@ const MapComponent = () => {
             </Marker>
           )}
         </MapContainer>
+        <div style={{ marginTop: "20px" }}>
+          <p>
+            Zones littorales :{" "}
+            {environmentData.coastal ? "Présentes" : "Absentes"}
+          </p>
+          <p>
+            Zones agricoles :{" "}
+            {environmentData.farmlands ? "Présentes" : "Absentes"}
+          </p>
+          <p>
+            Zones boisées :{" "}
+            {environmentData.woodlands ? "Présentes" : "Absentes"}
+          </p>
+        </div>
       </div>
     </div>
   );
