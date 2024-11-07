@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+.PagePartenaires{
+    border: solid red 2px;
+    height: 1000px;
+}
+
+/*//////////// HEADER /////////*/
+.header_partenaires{
+    border: solid 1px black;
+    height: 110px;
+    padding : 10px;
+    padding-bottom: 0px;
+    font-family: 'Montserrat';
+}
+.cadre1{
+    background-color: rgb(158, 53, 53);
+    justify-content: center; 
+    height: 50px;
+    width: 180px;
+    padding: 10px;
+}
+.cadre1 h3{
+    color: white;
+    font-weight: bolder;
+}
+.cadre2 {
+    width: 400px;
+    height: 50px;
+    position : relative;
+    bottom : 50px;
+    left : 450px;
+    justify-content: center;
+    padding: 0px;
+}
+.cadre2 h1{
+    font-weight: bolder;
+}
+.cadre3{
+    background-color: rgb(113, 110, 110);
+    color: white;
+    width: 800px;
+    height: 30px;
+    margin-top: 5px;
+    position: relative;
+    bottom: 40px;
+    left: 210px;
+    justify-content: center;
+}
+/*/////////////////////*/
+
+/*/////////////////////*/
+
+.colones {
+    flex-wrap: wrap;
+    color: #b25c5c;
+    padding:10px 0px 10px 0px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row; /* Affichage en ligne (colonnes à l'horizontale) */
+    justify-content: space-around; /* Espace uniforme entre les colonnes */
+    height: 550px;
+}
+.col1, .col2, .col3{
+    border: solid black 2px;
+    margin: 1px;
+    height: 500px auto;
+    width: 300px;
+    align-items: center;
+    place-items: center;
+}
+/*/////////////////////*/
+
+.titre{
+    color: black;
+    border-bottom: solid black;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.description{
+    border: solid black 2px;
+    height: 60px;
+    color: black;
+    background-color: lightgray;
+    margin-bottom: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Centre verticalement */
+}
+.zone_num{
+    display: flex;               /* Active Flexbox */
+    flex-direction: row;         /* Aligne les éléments sur une ligne */
+    flex-wrap: wrap;             /* Permet aux éléments de se réorganiser si l'espace est insuffisant */
+}
+
+.name {
+    color: black;
+    text-align: left;            /* Aligne le texte à gauche */
+    width: 100px;                /* Définit une largeur pour le nom */
+    border: solid pink 2px;
+    padding: 5px;                /* Ajoute de l'espace intérieur */
+}
+
+.num {
+    color: black;
+    width: 35px;                 /* Définit une largeur pour le numéro */
+    border: solid black 2px;
+    padding: 5px;                /* Ajoute de l'espace intérieur */
+    margin-left: 10px;           /* Espace entre le nom et le numéro */
+}
+.zone_num .img{
+    border: solid 2px rgb(0, 51, 255);
+    height: 30px;
+    width: 30px;
+}
+.desc p{
+    color: black;
+}
+/*/////////////////////*/
+
+.bottom{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Utile{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+.Quizz{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+.reseaux{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+/*/////////////////////*/
+
+.ContactUs{
+    border: solid black 2px;
+    padding: 0px;
+    width: 100px;
+}

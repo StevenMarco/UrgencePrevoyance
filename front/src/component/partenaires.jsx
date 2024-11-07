@@ -18,7 +18,7 @@ const PagePartenaires = () => {
         <div className="cadre3" >
             <div className="zone_texte">
                 <p>
-                N'hésitez pas à vous renseignez sur votre situation.<br></br>
+                N'hésitez pas à vous renseignez sur votre situation.
                 Ou prenez contacts avec nos partenaire.
                 </p>
             </div>
@@ -35,42 +35,42 @@ const PagePartenaires = () => {
                 <div className="zone_num" id="num1">
                     <p className="name"> . Pompier </p>
                     <p className="num">18</p>
-                    <div className="desc">
-                        <p>A contacter si : Incendie, Personne en danger, Sauvetage en montagne / mer, Risque industriel ou chimique.</p>
-                    </div>
                     <div className="img"></div>
+                    <div className="desc">
+                        <p>A contacter si : Incendie, Personne en danger, Risque industriel ou chimique.</p>
+                    </div>
                 </div>
                 <div className="zone_num" id="num2">
                     <p className="name"> . Police </p>
                     <p className="num">17</p>
+                    <div className="img"></div>
                     <div className="desc">
                         <p>A contacter si : Vol, Violences, Conflit, Menaces, Accident de la routes. </p>
                     </div>
-                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num3">
                     <p className="name"> . SAMU </p>
                     <p className="num">15</p>
-                    <div className="desc">
-                        <p>A contacter si : Urgences médicale (Malaise, Blessures importantes, Crise médicale, Besoin d'Ambulance.). </p>
-                    </div>
                     <div className="img"></div>
+                    <div className="desc">
+                        <p>A contacter si : Malaise, Blessures importantes, Crise médicale, Besoin d'Ambulance. </p>
+                    </div>
                 </div>
                 <div className="zone_num" id="num4">
                     <p className="name"> . Urgence Handicap - Par SMS -</p>
                     <p className="num">114</p>
+                    <div className="img"></div>
                     <div className="desc">
                         <p>Dédié aux personnes sourdes ou malentendantes.</p>
                     </div>
-                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num5">
                     <p className="name"> . Numéro d'Urgence Européen </p>
                     <p className="num">112</p>
+                    <div className="img"></div>
                     <div className="desc">
                         <p>A contacter si : Urgence depuis toute l'Europe.</p>
                     </div>
-                    <div className="img"></div>
                 </div>
             </div>
 
@@ -96,6 +96,8 @@ const PagePartenaires = () => {
                     </div>
                 </div>
 
+                
+                
                 <div className="liens">
                     <p className="name"> . Liens Utiles :</p>
                     <div className="img"></div>
@@ -144,6 +146,7 @@ const PagePartenaires = () => {
             </div>
         </div>
 
+        <div class="bottom">
         <div className="Utile">
             <p>Documents Utiles :</p>
             <a href="#" className="lien_docs" id="1">Document PDF</a>
@@ -178,6 +181,8 @@ const PagePartenaires = () => {
             <a href="#" className="lien_quizz" id="1">Quizz 1</a>
             <a href="#" className="lien_quizz" id="2">Quizz 2</a>
             <a href="#" className="lien_quizz" id="3">Quizz 3</a>
+        </div>
+
         </div>
 
         <div className="ContactUs">

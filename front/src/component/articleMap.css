@@ -1,0 +1,76 @@
+/* Pour le titre de la map*/
+.article-map-title {
+  margin-top: 100px;
+
+}
+
+
+
+/* Conteneur pour toutes les checklists */
+.checklist-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between; /* Répartit les checklists horizontalement */
+    gap: 20px; /* Espacement entre les checklists */
+    flex-wrap: wrap; /* Permet aux checklists de se réorganiser en cas d'espace insuffisant */
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Cache les éléments qui dépassent de la marge */
+  }
+    .namechecklist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white; /* Bordure blanche de 2px */
+    padding: 10px; /* Espacement intérieur de 10px */
+    border-radius: 15px; /* Coins arrondis de 5px */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Marge inférieure de 10px */
+  }
+  
+  /* Style pour chaque checklist */
+  .checklist {
+    flex: 1;
+    min-width: 200px; /* Taille minimum d'une checklist */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Marge pour chaque checklist */
+  }
+  
+  /* Liste des checklists */
+  .checklist ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .checklist li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .checklist-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Style des cases à cocher */
+  .checklist input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Ajustement pour petits écrans (responsive) */
+  @media (max-width: 768px) {
+    .checklist-container {
+      flex-direction: column; /* Si l'espace est limité, empile les checklists verticalement */
+      gap: 15px;
+    }
+  
+    .checklist {
+      min-width: 100%; /* Prend toute la largeur possible */
+    }
+  }
+  

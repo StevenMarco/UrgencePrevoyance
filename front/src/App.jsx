@@ -1,17 +1,18 @@
 import { useState } from "react";
-import "./App.css";
-import MapComponent from "./component/mapComponent";
-import InputAddress from "./component/inputAddress";
+import PageArticles from "./component/PageArticles";
+import ArticleMap from "./component/articleMap";
 import PagePartenaires from "./component/partenaires";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <h1>Carte dans un conteneur de 500x500px</h1>
-      <MapComponent />
-      <InputAddress />
+    <div style={{paddingTop: "100px"}}>
+      <PageArticles />
+      <ArticleMap />
       <PagePartenaires />
     </div>
+
+    
   );
 }
 
