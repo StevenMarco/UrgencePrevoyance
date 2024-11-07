@@ -218,69 +218,40 @@ const ArticleMap = () => {
   return (
     <>
     <h1 style={{paddingTop: "100px"}}>Cherchez votre localisation</h1>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "70vh",
-      }}
-    >
-      <div style={{ width: "60vw", height: "60vh" }}>
+    <div className="container-article-map">
+      <div className="article-map">
         <div style={{ margin: "20px" }}>
           <input
+            className="input-address-article-map"
             type="text"
             value={address}
             onChange={handleAddressChange}
             placeholder="Entrez votre adresse"
-            style={{
-              width: "31%",
-              borderRadius: "15px",
-              padding: "10px",
-              fontSize: "1em",
-              marginBottom: "10px",
-            }}
           />
           <input
             type="text"
             value={city}
             onChange={handleCityChange}
             placeholder="Entrez votre ville"
-            style={{
-              borderRadius: "15px",
-              marginRight: "30px",
-              marginLeft: "30px",
-              width: "31%",
-              padding: "10px",
-              fontSize: "1em",
-              marginBottom: "10px",
-            }}
+            className="input-city-article-map"
           />
           <input
             type="text"
             value={postalCode}
             onChange={handlePostalCodeChange}
             placeholder="Entrez votre code postal"
-            style={{
-              borderRadius: "15px",
-              width: "31%",
-              padding: "10px",
-              fontSize: "1em",
-              marginBottom: "20px",
-            }}  
+            className="input-postal-code-article-map"
           />
           <button
             onClick={getCoordinates}
-            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer" }}
+            className="button-article-map"
           >
             Obtenir les coordonnées
           </button>
           <button
             onClick={handleGeolocation}
+            className="button-article-map"
             style={{ 
-              padding: "10px 20px", 
-              fontSize: "1em", 
-              cursor: "pointer", 
               marginLeft: "10px",
               marginRight: "auto",
             }}
@@ -332,7 +303,7 @@ const ArticleMap = () => {
         </div> */}
       </div>
     </div>
-    <div className="container-article-map test-padding-top">
+    <div className="container-article-map">
           <div className="container-info-card">
             {/* <h2>{statusInfo.title}</h2>
             <p>{statusInfo.details}</p> */}
