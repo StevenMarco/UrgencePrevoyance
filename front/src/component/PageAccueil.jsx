@@ -11,9 +11,9 @@ function	PageAccueil(){
 			<div className="Titre">
 				<h1>UrgencePrevoyance</h1>
 				<img src={logo} alt="logo" width="300" height="200"></img>
-				<h3>PREVOIR DEMAIN</h3>
 			</div>
 			<div className="Sous-titre">
+				<h3>PREVOIR DEMAIN</h3>
 				<p>Informez-vous sur les risques qui vous concerne et sachez reagir.</p>
 			</div>
 			<div className="Corps">
@@ -32,7 +32,7 @@ function	PageAccueil(){
 			</div>
 			<div className='Bas-Page'>
 				<p>connaître les risques, informer, éduquer, surveiller, prévoir, réduire la vulnérabilité, protéger, se préparer à la crise, exploiter le retour d’expérience et responsabiliser.</p>
-        		  <button onClick={handleClick}>Test toi !</button>
+        		  <button onClick={handleClick}>Quizz!</button>
 
 			</div>
 		</div>
