@@ -1,5 +1,7 @@
 import React from "react";
 import "./partenaires.css";
+import logo from "../assets/logopompier.png";
+import logo2 from "../assets/logo2.png";
 
 const PagePartenaires = () => {
   
@@ -35,7 +37,9 @@ const PagePartenaires = () => {
                 <div className="zone_num" id="num1">
                     <p className="name"> . Pompier </p>
                     <p className="num">18</p>
-                    <div className="img"></div>
+                    <div className="img">
+                        <img src={logo} alt="pompierimg"></img>
+                    </div>
                     <div className="desc">
                         <p>A contacter si : Incendie, Personne en danger, Risque industriel ou chimique.</p>
                     </div>
@@ -43,7 +47,9 @@ const PagePartenaires = () => {
                 <div className="zone_num" id="num2">
                     <p className="name"> . Police </p>
                     <p className="num">17</p>
-                    <div className="img"></div>
+                    <div className="img">
+                        <img src={logo2} alt="policeimg"></img>c
+                    </div>
                     <div className="desc">
                         <p>A contacter si : Vol, Violences, Conflit, Menaces, Accident de la routes. </p>
                     </div>
