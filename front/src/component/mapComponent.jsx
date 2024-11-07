@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet"; // Importer Circle de Leaflet
 import "leaflet/dist/leaflet.css";
 
 const MapComponent = () => {
@@ -25,7 +25,7 @@ const MapComponent = () => {
       if (data.length > 0) {
         const { lat, lon } = data[0];
         setCoordinates({ lat, lon });
-        mapRef.current.setView([lat, lon], 17); // Centrer la carte sur les nouvelles coordonnées
+        mapRef.current.setView([lat, lon], 15); // Centrer la carte sur les nouvelles coordonnées
       } else {
         alert("Adresse non trouvée");
       }
@@ -40,7 +40,7 @@ const MapComponent = () => {
         (position) => {
           const { latitude, longitude } = position.coords;
           setCoordinates({ lat: latitude, lon: longitude });
-          mapRef.current.setView([latitude, longitude], 17); // Centrer la carte sur la position
+          mapRef.current.setView([latitude, longitude], 15); // Centrer la carte sur la position
         },
         (error) => {
           alert("Erreur de géolocalisation: " + error.message);
@@ -67,24 +67,43 @@ const MapComponent = () => {
             value={address}
             onChange={handleAddressChange}
             placeholder="Entrez votre adresse"
-            style={{ width: "300px", padding: "10px", fontSize: "1em", marginBottom: "10px" }}
+            style={{
+              width: "300px",
+              padding: "10px",
+              fontSize: "1em",
+              marginBottom: "10px",
+            }}
           />
           <input
             type="text"
             value={postalCode}
             onChange={handlePostalCodeChange}
             placeholder="Entrez votre code postal"
-            style={{ width: "300px", padding: "10px", fontSize: "1em", marginBottom: "10px" }}
+            style={{
+              width: "300px",
+              padding: "10px",
+              fontSize: "1em",
+              marginBottom: "10px",
+            }}
           />
           <button
             onClick={getCoordinates}
-            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer" }}
+            style={{
+              padding: "10px 20px",
+              fontSize: "1em",
+              cursor: "pointer",
+            }}
           >
             Obtenir les coordonnées
           </button>
           <button
             onClick={handleGeolocation}
-            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer", marginLeft: "10px" }}
+            style={{
+              padding: "10px 20px",
+              fontSize: "1em",
+              cursor: "pointer",
+              marginLeft: "10px",
+            }}
           >
             Géolocalisation
           </button>
@@ -92,16 +111,34 @@ const MapComponent = () => {
         <MapContainer
           center={[43.6835848, 7.2273575]}
           zoom={17}
-          style={{ width: "100%", height: "100%", borderRadius: "50px" }}
+          style={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "50px",
+          }}
           ref={mapRef}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {coordinates && (
-            <Marker position={[coordinates.lat, coordinates.lon]}>
-              <Popup>
-                Adresse trouvée : {coordinates.lat}, {coordinates.lon}
-              </Popup>
-            </Marker>
+            <>
+              {/* Marker pour les coordonnées */}
+              <Marker position={[coordinates.lat, coordinates.lon]}>
+                <Popup>
+                  Adresse trouvée : {coordinates.lat}, {coordinates.lon}
+                </Popup>
+              </Marker>
+
+              {/* Cercle de surbrillance autour des coordonnées (rouge) */}
+              <Circle
+                center={[coordinates.lat, coordinates.lon]}
+                radius={500} // Rayon du cercle en mètres
+                pathOptions={{
+                  color: "red", // Couleur du contour du cercle (rouge)
+                  fillColor: "red", // Couleur du remplissage du cercle (rouge)
+                  fillOpacity: 0.2, // Transparence du remplissage
+                }}
+              />
+            </>
           )}
         </MapContainer>
       </div>
