@@ -334,8 +334,8 @@ const ArticleMap = () => {
     </div>
     <div className="container-article-map test-padding-top">
           <div className="container-info-card">
-            <h2>{statusInfo.title}</h2>
-            <p>{statusInfo.details}</p>
+            {/* <h2>{statusInfo.title}</h2>
+            <p>{statusInfo.details}</p> */}
           </div>
 
         {/* Checklist de risques */}

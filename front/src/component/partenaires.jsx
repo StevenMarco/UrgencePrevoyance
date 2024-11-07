@@ -19,7 +19,7 @@ const PagePartenaires = () => {
             <div className="zone_texte">
                 <p>
                 N'hésitez pas à vous renseignez sur votre situation.
-                Ou prenez contacts avec nos partenaire.
+                Ou prenez contact avec nos partenaires.
                 </p>
             </div>
         </div>

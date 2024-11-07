@@ -14,7 +14,7 @@ function	PageAccueil(){
 			</div>
 			<div className="Sous-titre">
 				<h3>PREVOIR DEMAIN</h3>
-				<p>Informez-vous sur les risques qui vous concerne et sachez reagir.</p>
+				<p>Informez-vous sur les risques qui vous concernent et sachez reagir.</p>
 			</div>
 			<div className="Corps">
 				<div className="tremblements">
@@ -31,7 +31,8 @@ function	PageAccueil(){
 				</div>
 			</div>
 			<div className='Bas-Page'>
-				<p>connaître les risques, informer, éduquer, surveiller, prévoir, réduire la vulnérabilité, protéger, se préparer à la crise, exploiter le retour d’expérience et responsabiliser.</p>
+				{/* <p>connaître les risques, informer, éduquer, surveiller, prévoir, réduire la vulnérabilité, protéger, se préparer à la crise, exploiter le retour d’expérience et responsabiliser.</p> */}
+				<p>Testez vos connaissances et celles de votre famille !</p>
         		  <button onClick={handleClick}>Quizz!</button>
 
 			</div>
