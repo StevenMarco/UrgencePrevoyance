@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './PageArticles.css';
 import imgEau from "../assets/Eau.jpg";
 import imgIncendie from "../assets/incendie.jpg";
@@ -6,10 +6,16 @@ import imgSeisme from "../assets/seisme.jpg";
 
 function PageArticles() {
   const [backgroundColor, setBackgroundColor] = useState("#FFF");
-  const [selectedRisk, setSelectedRisk] = useState(null);  // Nouvel état pour suivre le risque sélectionné
+  const [selectedRisk, setSelectedRisk] = useState(null);  
+
+  useEffect(() => {
+    if (selectedRisk === null) {
+      setBackgroundColor("#E8E8E8");
+    }
+  });
 
   const handleClick = (type) => {
-    setSelectedRisk(type);  // Mettre à jour l'état avec le type de risque sélectionné
+    setSelectedRisk(type);  
     switch (type) {
       case "eau":
         setBackgroundColor("#30475E");
@@ -29,9 +35,9 @@ function PageArticles() {
     <div className="Page_Articles" style={{ backgroundColor }}>
       <div className='Paragraphe'>
         {selectedRisk === null && (
-          <p>
+          <h1>
             Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
-          </p>
+          </h1>
         )}
       </div>
 
