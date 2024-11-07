@@ -19,7 +19,7 @@ function PageArticles() {
         setBackgroundColor("#F05454");
         break;
       case "terre":
-        setBackgroundColor("#E8E8E8");
+        setBackgroundColor("#D79C2A");
         break;
       default:
         setBackgroundColor("#E8E8E8");
@@ -61,7 +61,7 @@ function PageArticles() {
 
       {/* Affichage conditionnel de l'article */}
       {isArticleOpen && (
-        <div className="support">
+        <div className={selectedRisk ? "support" : ""}>
           <div className="support_text">
             {selectedRisk === "eau" && (
               <div className="fadeIn">
