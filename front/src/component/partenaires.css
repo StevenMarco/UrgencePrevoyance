@@ -1,3 +1,4 @@
+
 /* 1. Mise en page générale */
 .PagePartenaires {
     font-family: Arial, sans-serif;
@@ -74,47 +75,62 @@
     margin-bottom: 20px;
   }
   
-  .zone_num, .zone_radio, .zone_lien, .reseau, .assistance {
+  .zone_num, .zone_radio, .zone_lien, .reseau, .assistance, .Utile, .Quizz {
     margin-bottom: 20px;
   }
+
+  .Utile{
+    margin-top: 90%;
+  }
+  .Quizz{
+    margin-top: 10%;
+  }
   
+/*zone_num*/
+#num1 .img{
+  background-image: url('../assets/sarah/pompier.png');
+}
+#num2 .img{
+  background-image: url('../assets/sarah/policier.png');
+}
+#num3 .img{
+  background-image: url('../assets/sarah/medecin.png');
+}
+#num4 .img{
+  background-image: url('../assets/sarah/handicap.png');
+}
+#num5 .img{
+  background-image: url('../assets/sarah/europe.png');
+}
+
   /* 4. Cartes d'urgence et de communication */
-  .zone_num, .zone_radio, .zone_lien, .reseau {
+  .zone_num, .zone_radio, .zone_lien, .reseau, .Utile, .Quizz{
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  .zone_num .img{
+    position: relative;
+    top: 90%;
+    left: 40%;
+  }
 
-  /*zone_lien*/
-  /* 3. Style spécifique pour la section "Réseaux Sociaux" */
-.reseaux .reseau {
-    display: flex;
-    align-items: center;
-    background-color: #fafafa;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  .liens{
+    margin-top: 50%;
   }
-  
-  .reseaux .reseau .logo {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
+
+  .radio .name{
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
-  
-  .reseaux .reseau .texte {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
+
+  /*****LIENS**/
+  .reseaux{
+    margin-top: 30%;
+    width: 100%;
   }
-  
-  .reseaux .reseau:hover {
-    background-color: #e0e0e0;
-  }
-  /***/
+  /*****/
   
   .name {
     font-weight: bold;
@@ -137,8 +153,11 @@
   
   .desc {
     font-size: 14px;
-    color: rgb(22, 21, 21);
     margin-top: 10px;
+  }
+
+  p{
+    color: black;
   }
   
   .station {
@@ -164,6 +183,7 @@
     cursor: pointer;
     text-align: center;
     width: 200px;
+    height: 100px;
   }
   
   .btn:hover {
@@ -204,9 +224,7 @@
     width: 100%;
   }
   
-  .Utile, .reseaux, .Quizz {
-    width: 30%;
-  }
+ 
   
   .Utile p, .reseaux p, .Quizz p {
     font-size: 18px;
@@ -256,7 +274,8 @@
   
     .Utile, .reseaux, .Quizz {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 30%;
+      margin-top: 30%;
     }
   }
   

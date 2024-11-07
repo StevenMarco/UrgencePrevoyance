@@ -19,7 +19,7 @@ const PagePartenaires = () => {
             <div className="zone_texte">
                 <p>
                 N'hésitez pas à vous renseignez sur votre situation.
-                Ou prenez contacts avec nos partenaire.
+                Ou prenez contacts avec nos partenaires.
                 </p>
             </div>
         </div>
@@ -35,42 +35,47 @@ const PagePartenaires = () => {
                 <div className="zone_num" id="num1">
                     <p className="name"> . Pompier </p>
                     <p className="num">18</p>
-                    <div className="img"></div>
+                    
                     <div className="desc">
-                        <p>A contacter si : Incendie, Personne en danger, Risque industriel ou chimique.</p>
+                        <p>Incendies, Personnes en danger, Risques chimique.</p>
                     </div>
+                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num2">
                     <p className="name"> . Police </p>
                     <p className="num">17</p>
-                    <div className="img"></div>
+                 
                     <div className="desc">
-                        <p>A contacter si : Vol, Violences, Conflit, Menaces, Accident de la routes. </p>
+                        <p>Vol, Violences, Conflit, Menaces, Accident de la routes. </p>
                     </div>
+                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num3">
                     <p className="name"> . SAMU </p>
                     <p className="num">15</p>
-                    <div className="img"></div>
+                   
                     <div className="desc">
                         <p>A contacter si : Malaise, Blessures importantes, Crise médicale, Besoin d'Ambulance. </p>
                     </div>
+                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num4">
                     <p className="name"> . Urgence Handicap - Par SMS -</p>
                     <p className="num">114</p>
-                    <div className="img"></div>
+                   
                     <div className="desc">
                         <p>Dédié aux personnes sourdes ou malentendantes.</p>
                     </div>
+                    <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num5">
                     <p className="name"> . Numéro d'Urgence Européen </p>
                     <p className="num">112</p>
-                    <div className="img"></div>
+                
                     <div className="desc">
                         <p>A contacter si : Urgence depuis toute l'Europe.</p>
                     </div>
+                       <div className="img"></div>
                 </div>
             </div>
 
@@ -81,7 +86,7 @@ const PagePartenaires = () => {
                 </p>
                 <div className="radio">
                     <p className="name"> . Station de Radio :</p>
-                    <div className="img"></div>
+                   
                     <div className="zone_radio" id="radio1"> 
                         <p className="name"> France Bleu Azur</p>
                         <p className="station">92.3</p>
@@ -100,19 +105,43 @@ const PagePartenaires = () => {
                 
                 <div className="liens">
                     <p className="name"> . Liens Utiles :</p>
-                    <div className="img"></div>
+                    
                     <div className="zone_lien" id="lien1"> 
                         <p className="name"> Préfecture des Alpes-Maritimes :</p>
-                        <div className="logo"></div>
-                        <p className="texte"> LIEN</p>
-                        <div className="qrCode"></div>
+                        <p className="texte"> 
+                        <a href="http://www.alpes-maritimes.pref.gouv.fr/" 
+                    target="_blank">Lien</a>
+                        </p>
+                    
                     </div>
                     <div className="zone_lien" id="lien2"> 
                         <p className="name"> Météo France :</p>
-                        <div className="logo"></div>
-                        <p className="texte"> LIEN</p>
-                        <div className="qrCode"></div>
+                       
+                        <p className="texte"> <a href="https://meteofrance.com/previsions-meteo-france/alpes-maritimes/6" 
+                    target="_blank">Lien</a></p>
+                      
                     </div>
+
+                    <div className="reseaux">
+            <p> Réseaux Sociaux : </p>
+            <div className="reseau" id="reseau1"> 
+                <p className="name"> Préfecture des Alpes-Maritimes</p>
+              
+                <p className="texte"> @Prefet06 </p>
+                
+            </div>
+            <div className="reseau" id="reseau2"> 
+                <p className="name"> Alerte Météo Alpes-Maritimes</p>
+             
+                <p className="texte"> @VigiMeteo </p>
+               
+            </div>
+            <div className="reseau" id="reseau3"> 
+                <p className="name"> Sapeurs Pompier des Alpes-Maritimes</p>
+                <p className="texte"> @SDIS06 </p>
+            </div>
+        </div>
+
                 </div>
             </div>
 
@@ -122,68 +151,55 @@ const PagePartenaires = () => {
                     Trouvez de l'aide auprès de nos partenaires.
                 </p>
                 <div className="assistance" id="cas1"> 
+                <a href="https://www.topizy.fr/content/23-electricite" 
+                    target="_blank">
                     <button type="submit" className="btn"> Eléctricité / Eclairage </button>
+                    </a>
                 </div>
                 <div className="assistance" id="cas2"> 
-                    <button type="submit" className="btn"> Chauffage </button>
+                <a href="https://www.topizy.fr/content/25-chauffage" 
+                    target="_blank">
+                    <button type="submit" className="btn"> Chauffage </button></a>
                 </div>
                 <div className="assistance" id="cas3"> 
                     <a href="https://www.topizy.fr/content/22-plomberie" 
-                    target="_blank">Plomberie</a>
+                    target="_blank">
+                        <button type="submit" className="btn"> Plomberie </button>
+                    </a>
                 </div>
                 <div className="assistance" id="cas4"> 
                     <a href="https://www.topizy.fr/content/26-electro" 
-                    target="_blank">Eléctroménager</a>
+                    target="_blank"><button type="submit" className="btn"> Eléctroménager </button></a>
                 </div>
                 <div className="assistance" id="cas5"> 
                     <a href="https://www.topizy.fr/content/24-serrurerie" 
-                    target="_blank">Serrurerie</a>
+                    target="_blank"><button type="submit" className="btn"> Serrurerie </button></a>
                 </div>
                 <div className="assistance" id="cas6"> 
                     <a href="https://www.topizy.fr/content/26-electro" 
-                    target="_blank">Eléctronique / Hi-tech</a>
+                    target="_blank"><button type="submit" className="btn"> Eléctronique / Hi-tech </button></a>
                 </div>
-            </div>
-        </div>
 
-        <div class="bottom">
-        <div className="Utile">
-            <p>Documents Utiles :</p>
-            <a href="#" className="lien_docs" id="1">Document PDF</a>
-            <a href="#" className="lien_docs" id="2">Docuemnt PDF</a>
-            <a href="#" className="lien_docs" id="3">Docuemnt PDF</a>
-        </div>
 
-        <div className="reseaux">
-            <p> Réseaux Sociaux : </p>
-            <div className="reseau" id="reseau1"> 
-                <p className="name"> Préfecture des Alpes-Maritimes :</p>
-                <div className="logo"></div>
-                <p className="texte"> @Prefet06 </p>
-                <div className="qrCode"></div>
-            </div>
-            <div className="reseau" id="reseau2"> 
-                <p className="name"> Alerte Météo :</p>
-                <div className="logo"></div>
-                <p className="texte"> @VigiMeteo </p>
-                <div className="qrCode"></div>
-            </div>
-            <div className="reseau" id="reseau3"> 
-                <p className="name"> Sapeurs Pompier des Alpes-Maritimes :</p>
-                <div className="logo"></div>
-                <p className="texte"> @SDIS06 </p>
-                <div className="qrCode"></div>
-            </div>
-        </div>
+            <div className="Utile">
+                <p>Documents Utiles :</p>
+                <a href="#" className="lien_docs" id="1">Document PDF</a>
+                <a href="#" className="lien_docs" id="2">Docuement PDF</a>
+                <a href="#" className="lien_docs" id="3">Docuement PDF</a>
+                </div>
 
-        <div className="Quizz">
+                <div className="Quizz">
             <p>Quizz :</p>
             <a href="#" className="lien_quizz" id="1">Quizz 1</a>
             <a href="#" className="lien_quizz" id="2">Quizz 2</a>
             <a href="#" className="lien_quizz" id="3">Quizz 3</a>
         </div>
+            </div>
+
+            
 
         </div>
+
 
         <div className="ContactUs">
             <button type="submit" className="btn">Nous Contactez</button>
