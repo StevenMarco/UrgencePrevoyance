@@ -39,6 +39,22 @@ const MapComponent = () => {
       console.error("Erreur lors de la récupération des coordonnées:", error);
     }
   };
+  const handleGeolocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setCoordinates({ lat: latitude, lon: longitude });
+          mapRef.current.setView([latitude, longitude], 17); // Centrer la carte sur la position
+        },
+        (error) => {
+          alert("Erreur de géolocalisation: " + error.message);
+        }
+      );
+    } else {
+      alert("La géolocalisation n'est pas supportée par votre navigateur.");
+    }
+  };
 
   const checkEnvironmentData = async (lat, lon) => {
     const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];(way(around:500,${lat},${lon})[natural=coastline];way(around:500,${lat},${lon})[landuse=farmland];way(around:500,${lat},${lon})[landuse=forest];);out body;`;
@@ -62,7 +78,6 @@ const MapComponent = () => {
       );
     }
   };
-
   return (
     <div
       style={{
@@ -103,6 +118,12 @@ const MapComponent = () => {
             style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer" }}
           >
             Obtenir les coordonnées
+          </button>
+          <button
+            onClick={handleGeolocation}
+            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer", marginLeft: "10px" }}
+          >
+            Géolocalisation
           </button>
         </div>
         <MapContainer
