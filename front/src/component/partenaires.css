@@ -75,12 +75,12 @@
     margin-bottom: 20px;
   }
   
-  .zone_num, .zone_radio, .zone_lien, .reseau, .assistance, .Utile, .Quizz {
+  .zone_num, .zone_radio, .zone_lien, .reseau, .assistance, .Utile, .Quizz, .Engagement {
     margin-bottom: 20px;
   }
 
-  .Utile{
-    margin-top: 90%;
+  .Utile, .Engagement{
+    margin-top: 30%;
   }
   .Quizz{
     margin-top: 10%;
@@ -104,7 +104,7 @@
 }
 
   /* 4. Cartes d'urgence et de communication */
-  .zone_num, .zone_radio, .zone_lien, .reseau, .Utile, .Quizz{
+  .zone_num, .zone_radio, .zone_lien, .reseau, .Utile, .Quizz, .Engagement{
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 5px;
@@ -226,7 +226,7 @@
   
  
   
-  .Utile p, .reseaux p, .Quizz p {
+  .Utile p, .reseaux p, .Quizz p , .Engagement p{
     font-size: 18px;
     font-weight: bold;
     color: #333;

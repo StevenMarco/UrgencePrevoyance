@@ -180,6 +180,10 @@ const PagePartenaires = () => {
                     target="_blank"><button type="submit" className="btn"> Eléctronique / Hi-tech </button></a>
                 </div>
 
+            <div className="Engagement">
+                <p>Apporter son aide en période crise:</p>
+                <a href="https://assegr.nicecotedazur.org/devenir-benevole/" className="lien_engagement" target="_blank">Devenir Bénévole</a>
+            </div>
 
             <div className="Utile">
                 <p>Documents Utiles :</p>
@@ -190,7 +194,7 @@ const PagePartenaires = () => {
 
                 <div className="Quizz">
             <p>Quizz :</p>
-            <a href="#" className="lien_quizz" id="1">Quizz 1</a>
+            <a href="http://localhost:5173/Quiz" className="lien_quizz" id="1">Quizz 1</a>
             <a href="#" className="lien_quizz" id="2">Quizz 2</a>
             <a href="#" className="lien_quizz" id="3">Quizz 3</a>
         </div>
