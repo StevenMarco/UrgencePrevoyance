@@ -340,72 +340,87 @@ const ArticleMap = () => {
 
         {/* Checklist de risques */}
         <div className="checklist-container">
-          {innondationStatus && (
-            <div className="checklist">
-              <h3 className= "namechecklist">Checklist Inondation</h3>
-              <ul>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Assurez-vous que votre logement est à l'abri des inondations.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Préparez un kit d'urgence incluant des vivres, de l'eau et des médicaments.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Évacuez les zones basses en cas de montée des eaux.
-                  </label>
-                </li>
-              </ul>
-            </div>
-          )}
-          {fireStatus && (
-            <div className="checklist">
-              <h3 className="namechecklist">Checklist Incendie</h3>
-              <ul>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Évitez les zones à risque d'incendie.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Assurez-vous que vos foyers et appareils électriques sont sécurisés.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Gardez une trousse d'urgence avec des masques et de l'eau.
-                  </label>
-                </li>
-              </ul>
-            </div>
-          )}
-          {seismeStatus && (
-            <div className="checklist">
-              <h3 className="namechecklist" >Checklist Séisme</h3>
-              <ul>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Installez des dispositifs de sécurité pour limiter les risques de blessures pendant un tremblement de terre.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Identifiez les zones sûres de votre habitation.
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" /> Préparez un kit de survie avec des lampes de poche et de l'eau potable.
-                  </label>
-                </li>
-              </ul>
-            </div>
-          )}
+        {innondationStatus && (
+        <div className="checklist">
+            <h3 className="namechecklist">Checklist Inondation</h3>
+            <ul>
+            <li>
+                <label>
+                <input type="checkbox" /> Kit d'urgence avec eau, vivres, médicaments et lampe de poche.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Surveillez les alertes météo et suivez les consignes des autorités.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Connaître les itinéraires d'évacuation.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Avoir un plan d'évacuation pour les zones à risque.
+                </label>
+            </li>
+            </ul>
+        </div>
+        )}
+        {fireStatus && (
+        <div className="checklist">
+            <h3 className="namechecklist">Checklist Incendie</h3>
+            <ul>
+            <li>
+                <label>
+                <input type="checkbox" /> Trousse d'urgence avec de l'eau, des masques et des objets essentiels.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Détecteur de fumée fonctionnel.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Un extincteur accessible et fonctionnel.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Connaître les itinéraires d'évacuation et avoir un point de rassemblement.
+                </label>
+            </li>
+            </ul>
+        </div>
+        )}
+        {seismeStatus && (
+        <div className="checklist">
+            <h3 className="namechecklist">Checklist Séisme</h3>
+            <ul>
+            <li>
+                <label>
+                <input type="checkbox" /> Identifier des zones sûres à l'intérieur de la maison.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Kit de survie avec des lampes de poche, de l'eau potable et des vivres.
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Revoir les consignes à suivre après un séisme (éviter les routes, vérifier les dégâts).
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" /> Prévoir un moyen de communication d'urgence.
+                </label>
+            </li>
+            </ul>
+        </div>
+        )}
         </div>
       </div>
     </>

@@ -1,13 +1,10 @@
-/* Pour le titre de la map*/
+/* Pour le titre de la map */
 .article-map-title {
-  margin-top: 100px;
-
-}
-
-
-
-/* Conteneur pour toutes les checklists */
-.checklist-container {
+    margin-top: 100px;
+  }
+  
+  /* Conteneur pour toutes les checklists */
+  .checklist-container {
     margin-top: 70px;
     display: flex;
     justify-content: space-between; /* Répartit les checklists horizontalement */
@@ -18,7 +15,8 @@
     max-width: 100%;
     overflow-x: hidden; /* Cache les éléments qui dépassent de la marge */
   }
-    .namechecklist {
+  
+  .namechecklist {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +49,7 @@
     color: #555;
   }
   
+  /* Taille du texte pour les titres des checklists */
   .checklist-container h3 {
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -60,6 +59,12 @@
   /* Style des cases à cocher */
   .checklist input[type="checkbox"] {
     margin-right: 10px;
+  }
+  
+  /* Agrandir le texte des labels des cases à cocher */
+  .checklist label {
+    font-size: 1.2rem; /* Agrandir le texte des labels */
+    line-height: 1.5; /* Améliore la lisibilité */
   }
   
   /* Ajustement pour petits écrans (responsive) */
