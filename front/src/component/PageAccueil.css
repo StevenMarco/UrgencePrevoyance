@@ -1,0 +1,15 @@
+.Corps p {
+    font-size: 1.5em;
+    text-align: center;
+    color: #0a0909;
+    margin-bottom: 30px;
+}
+
+.Titre h3 {
+	font-size: 32px; /* Par exemple, pour une taille de 3 rem */
+}
+
+.Sous-titre p {
+	font-size: 16px;
+	color: #0a0909;
+}
