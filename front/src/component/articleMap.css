@@ -63,7 +63,7 @@
 }
 
 .container-article-map {
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 /* Style pour le titre de chaque checklist */
@@ -141,6 +141,10 @@
   .checklist-container {
     flex-direction: column; /* Empile les checklists verticalement */
     gap: 15px;
+  }
+
+  .container-article-map {
+    margin-top: 10%;
   }
 
   .checklist {
