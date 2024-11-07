@@ -19,7 +19,7 @@ function PageArticles() {
         setBackgroundColor("#F05454");
         break;
       case "terre":
-        setBackgroundColor("#D79C2A");
+        setBackgroundColor("#E8E8E8");
         break;
       default:
         setBackgroundColor("#E8E8E8");
