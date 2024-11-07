@@ -6,7 +6,7 @@ const ArticleMap = () => {
   // Statuts des risques
   const [innondationStatus, setInnondationStatus] = useState(true);
   const [fireStatus, setFireStatus] = useState(true);
-  const [seismeStatus, setSeismeStatus] = useState(false);
+  const [seismeStatus, setSeismeStatus] = useState(true);
 
   // Fonction pour générer l'information dynamique
   const getStatusInfo = () => {
@@ -61,7 +61,7 @@ const ArticleMap = () => {
 
   return (
     <div className="container-article-map test-padding-top">
-      <h1 className="article-map-title">Titre de la Carte</h1>
+      <h1 className="article-map-title">Vérifie ta possition</h1>
 
       <div className="input-container">
         {/* <InputAddress /> */}
@@ -82,7 +82,7 @@ const ArticleMap = () => {
       <div className="checklist-container">
         {innondationStatus && (
           <div className="checklist">
-            <h3>Checklist Inondation</h3>
+            <h3 className= "namechecklist">Checklist Inondation</h3>
             <ul>
               <li>
                 <label>
@@ -104,7 +104,7 @@ const ArticleMap = () => {
         )}
         {fireStatus && (
           <div className="checklist">
-            <h3>Checklist Incendie</h3>
+            <h3 className="namechecklist">Checklist Incendie</h3>
             <ul>
               <li>
                 <label>
@@ -126,7 +126,7 @@ const ArticleMap = () => {
         )}
         {seismeStatus && (
           <div className="checklist">
-            <h3>Checklist Séisme</h3>
+            <h3 className="namechecklist" >Checklist Séisme</h3>
             <ul>
               <li>
                 <label>

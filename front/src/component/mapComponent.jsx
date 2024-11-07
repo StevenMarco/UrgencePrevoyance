@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "./articleMap.css";
 
 const MapComponent = () => {
   const [address, setAddress] = useState("");
@@ -75,7 +76,7 @@ const MapComponent = () => {
         (error) => {
           alert("Erreur de géolocalisation: " + error.message);
         }
-      );
+      )
     } else {
       alert("La géolocalisation n'est pas supportée par votre navigateur.");
     }
@@ -154,7 +155,8 @@ const MapComponent = () => {
             onChange={handleAddressChange}
             placeholder="Entrez votre adresse"
             style={{
-              width: "300px",
+              width: "31%",
+              borderRadius: "15px",
               padding: "10px",
               fontSize: "1em",
               marginBottom: "10px",
@@ -166,7 +168,10 @@ const MapComponent = () => {
             onChange={handleCityChange}
             placeholder="Entrez votre ville"
             style={{
-              width: "300px",
+              borderRadius: "15px",
+              marginRight: "30px",
+              marginLeft: "30px",
+              width: "31%",
               padding: "10px",
               fontSize: "1em",
               marginBottom: "10px",
@@ -178,11 +183,12 @@ const MapComponent = () => {
             onChange={handlePostalCodeChange}
             placeholder="Entrez votre code postal"
             style={{
-              width: "300px",
+              borderRadius: "15px",
+              width: "31%",
               padding: "10px",
               fontSize: "1em",
-              marginBottom: "10px",
-            }}
+              marginBottom: "20px",
+            }}  
           />
           <button
             onClick={getCoordinates}
@@ -192,15 +198,21 @@ const MapComponent = () => {
           </button>
           <button
             onClick={handleGeolocation}
-            style={{ padding: "10px 20px", fontSize: "1em", cursor: "pointer", marginLeft: "10px" }}
+            style={{ 
+              padding: "10px 20px", 
+              fontSize: "1em", 
+              cursor: "pointer", 
+              marginLeft: "10px",
+              marginRight: "auto",
+            }}
           >
             Géolocalisation
           </button>
-        </div>
+        </div>  
         <MapContainer
           center={[43.6835848, 7.2273575]}
           zoom={15}
-          style={{ width: "100%", height: "100%", borderRadius: "50px" }}
+          style={{ width: "105%", height: "100%", borderRadius: "15px", marginLeft: "-2.6%", marginRight: "-2.6%" }}
           ref={mapRef}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -217,13 +229,13 @@ const MapComponent = () => {
                 pathOptions={{
                   color: "red", // Couleur du contour du cercle (rouge)
                   fillColor: "red", // Couleur du remplissage du cercle (rouge)
-                  fillOpacity: 0.2, // Transparence du remplissage
+                  fillOpacity: 0.2, // Transparence du   remplissage
                 }}
               />
             </>
           )}
         </MapContainer>
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "px" }}>
           <p>Zones littorales : {environmentData.coastal ? "Présentes" : "Absentes"}</p>
           <p>Zones agricoles : {environmentData.farmlands ? "Présentes" : "Absentes"}</p>
           <p>Zones boisées : {environmentData.woodlands ? "Présentes" : "Absentes"}</p>
@@ -235,15 +247,8 @@ const MapComponent = () => {
           <p>Falaise : {environmentData.cliff ? "Présentes" : "Absentes"}</p>
           <p>Colline : {environmentData.hill ? "Présentes" : "Absentes"}</p>
           <p>Chaîne de montagnes : {environmentData.mountain_range ? "Présentes" : "Absentes"}</p>
-          <p>Bâtiments : {environmentData.building ? "Présentes" : "Absentes"}</p>
-          <p>Tours : {environmentData.tower ? "Présentes" : "Absentes"}</p>
-          <p>Zones industrielles : {environmentData.industrial ? "Présentes" : "Absentes"}</p>
-          <p>Zones résidentielles : {environmentData.residential ? "Présentes" : "Absentes"}</p>
-          <p>Routes : {environmentData.highway ? "Présentes" : "Absentes"}</p>
-          <p>Voies ferrées : {environmentData.railway ? "Présentes" : "Absentes"}</p>
           <p>Barrage : {environmentData.dam ? "Présentes" : "Absentes"}</p>
           <p>Réservoirs : {environmentData.reservoir ? "Présentes" : "Absentes"}</p>
-          <p>Décharges : {environmentData.landfill ? "Présentes" : "Absentes"}</p>
           <p>Zones inondables : {environmentData.floodplain ? "Présentes" : "Absentes"}</p>
         </div>
       </div>
