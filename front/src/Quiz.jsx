@@ -1,50 +1,103 @@
-import React, { useState } from "react";
-import risk1 from "./assets/risk1.jpg";
-import risk2 from "./assets/risk2.jpg";
-import risk3 from "./assets/risk3.jpg";
-import risk4 from "./assets/risk4.jpg";
-import "./Quiz.css"; // Importez le fichier CSS
+import React, { useState, useEffect } from "react";
+import risk1 from "./assets/risk1.jpeg";
+import risk2 from "./assets/risk2.jpeg";
+import risk3 from "./assets/risk3.jpeg";
+import risk4 from "./assets/risk4.jpeg";
+import risk5 from "./assets/risk5.jpeg";
+import risk6 from "./assets/risk6.jpeg";
+import risk7 from "./assets/risk7.jpeg";
+import risk8 from "./assets/risk8.jpeg";
+import "./Quiz.css";
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
 
-  const questions = [
-    {
-      imageUrl: risk1,
-      isRisk: true,
-    },
-    {
-      imageUrl: risk2,
-      isRisk: false,
-    },
-    {
-      imageUrl: risk3,
-      isRisk: true,
-    },
-    {
-      imageUrl: risk4,
-      isRisk: false,
-    },
-  ];
+  useEffect(() => {
+    const initialQuestions = [
+      {
+        imageUrl: risk1,
+        isRisk: false,
+        preventionMessage: "Aucun risque n'est présent sur cette image.",
+      },
+      {
+        imageUrl: risk2,
+        isRisk: false,
+        preventionMessage: "Aucun risque n'est présent sur cette image.",
+      },
+      {
+        imageUrl: risk3,
+        isRisk: true,
+        preventionMessage:
+          "Un risque est présent sur cette image : risque d'innondation.",
+      },
+      {
+        imageUrl: risk4,
+        isRisk: true,
+        preventionMessage: "Cette image représente un départ d'incendie.",
+      },
+      {
+        imageUrl: risk5,
+        isRisk: true,
+        preventionMessage: "Des pierres risquent de tomber sur la route.",
+      },
+      {
+        imageUrl: risk6,
+        isRisk: true,
+        preventionMessage: "Cette image présente une innondation.",
+      },
+      {
+        imageUrl: risk7,
+        isRisk: true,
+        preventionMessage: "Cette image présente un éboulement.",
+      },
+      {
+        imageUrl: risk8,
+        isRisk: true,
+        preventionMessage: "Cette image présente une innondation.",
+      },
+    ];
+
+    setQuestions(shuffleArray(initialQuestions));
+  }, []);
+
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
 
   const handleAnswer = (isRisk) => {
     if (isRisk === questions[currentQuestion].isRisk) {
       setScore(score + 1);
+      handleNextQuestion();
+    } else {
+      setIsAnswerCorrect(false);
     }
+  };
 
+  const handleNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
+      setIsAnswerCorrect(null);
     } else {
       setShowScore(true);
     }
   };
 
+  const progressPercentage = ((currentQuestion + 1) / questions.length) * 100;
+
   return (
     <div className="quiz-container">
       <h1>Quiz Page</h1>
+      <div className="progress-bar">
+        <div
+          className="progress-bar-fill"
+          style={{ width: `${progressPercentage}%` }}
+        ></div>
+      </div>
       {showScore ? (
         <div className="score-section">
           <h2>
@@ -53,27 +106,42 @@ function Quiz() {
         </div>
       ) : (
         <div className="question-section">
-          <div className="image-container">
-            <img
-              src={questions[currentQuestion].imageUrl}
-              alt="Quiz"
-              className="quiz-image"
-            />
-          </div>
-          <div className="answer-buttons">
-            <button
-              className="answer-button"
-              onClick={() => handleAnswer(false)}
-            >
-              Ne présente pas de risque
-            </button>
-            <button
-              className="answer-button"
-              onClick={() => handleAnswer(true)}
-            >
-              Présente un risque
-            </button>
-          </div>
+          {isAnswerCorrect === null ? (
+            <>
+              <div className="image-container">
+                {questions.length > 0 && (
+                  <img
+                    src={questions[currentQuestion].imageUrl}
+                    alt="Quiz"
+                    className="quiz-image"
+                  />
+                )}
+              </div>
+              <div className="answer-buttons">
+                <button
+                  className="answer-button"
+                  onClick={() => handleAnswer(false)}
+                >
+                  Ne présente pas de risque
+                </button>
+                <button
+                  className="answer-button"
+                  onClick={() => handleAnswer(true)}
+                >
+                  Présente un risque
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="prevention-message">
+              <p style={{ color: "black" }}>
+                {questions[currentQuestion].preventionMessage}
+              </p>
+              <button className="next-button" onClick={handleNextQuestion}>
+                Suivant
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>

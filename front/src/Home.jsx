@@ -2,6 +2,7 @@ import PageArticles from "./component/PageArticles";
 import ArticleMap from "./component/articleMap";
 import PageAccueil from "./component/PageAccueil";
 import "./Home.css";
+import PagePartenaires from "./component/partenaires";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <PageAccueil />
       <PageArticles />
       <ArticleMap />
+      <PagePartenaires />
     </div>
   );
 }

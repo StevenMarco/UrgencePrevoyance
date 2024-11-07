@@ -55,3 +55,40 @@ h1 {
 .answer-button:hover {
   background-color: #0056b3;
 }
+
+.prevention-message {
+  font-size: 1.2em;
+  color: #d9534f; /* Red color for warning */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff; /* Blue color for button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+  height: 20px;
+  background-color: #76c7c0;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
