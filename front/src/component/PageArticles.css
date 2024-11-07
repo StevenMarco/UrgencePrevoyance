@@ -1,55 +1,104 @@
-.Page_Articles{
+.Page_Articles {
     width: 100%;
     height: fit-content;
-    padding: 10px 120px;
-    font-family: Monserrat;
+    padding: 20px 80px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* Texte par défaut en blanc */
 }
 
-.Page_Articles h1{
-    font-family: Decalotype;
-    font-size: 5em;
+.Page_Articles h1 {
+    font-family: 'Decalotype', sans-serif;
+    font-size: 4em;
+    color: #F0F0F0;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.choix{
+.Paragraphe p {
+    font-size: 1.5em;
+    text-align: center;
+    color: #E8E8E8;
+    margin-bottom: 30px;
+}
+
+.choix {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 10%;
+    gap: 5%;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
-.choix img{
-    width: 220px;
-    height: 220px;
-    border-radius: 1000px;
+.choix img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.support{
-    
+.choix img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-.support_text{
-    
+.support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(48, 71, 94, 0.2); /* Fond translucide */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
 }
 
-.Inondation{
-    
+.support_text {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-.Incendie{
-    
-}
-.Incendie ul{
-    list-style: none;
-    padding: 0;
-    margin: 0px ;
+.fadeIn {
+    animation: fadeIn 0.5s ease;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-.Incendie li{
+.Inondation, .Incendies, .Seisme {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #FFD700; /* Une couleur de séparation dorée */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+h2 {
+    color: #FFD700;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+p, ul {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+strong {
+    color: #FFD700; /* Améliore la visibilité des parties en gras */
+}
+
+.Incendie ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.Incendie li {
     text-decoration: none;
-}
-
-.Seisme{
-    
+    margin-bottom: 8px;
 }

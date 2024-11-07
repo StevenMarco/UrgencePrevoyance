@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './PageArticles.css';
 import imgEau from "../assets/Eau.jpg";
 import imgIncendie from "../assets/incendie.jpg";
@@ -53,6 +53,21 @@ function PageArticles() {
             <div className="fadeIn">
               <h1 className='Inondation'>Les inondations</h1>
               <h2 className='Inondation'>Lors de fortes pluies, le risque est présent</h2>
+              <p className='Inondation'>
+                Importance des mesures d’évacuation rapide : Une montée des eaux peut submerger une zone en quelques minutes seulement, surtout lors d’épisodes de crues soudaines. Préparez un kit d’urgence comprenant de l'eau, de la nourriture, une lampe de poche et une radio à piles pour recevoir les alertes en temps réel.
+              </p>
+              <p className='Inondation'>
+                Vigilance sur les crues : En France, <strong>1 logement sur 3</strong> se trouve en zone inondable, ce qui fait de l'inondation le risque naturel le plus fréquent dans le pays. Il est crucial de rester informé et d'écouter les bulletins météorologiques, surtout lors d'alertes orange ou rouge.
+              </p>
+              <p className='Inondation'>
+                Assurez la sécurité des habitations : Si vous habitez en zone inondable, placez vos biens précieux à un étage supérieur et investissez dans des barrières anti-inondation. Cela peut réduire les dégâts en cas de montée des eaux. Un mètre d'eau suffit pour déplacer un véhicule, donc ne laissez pas vos voitures dans les rues lors des fortes pluies.
+              </p>
+              <p className='Inondation'>
+                Aménagements anti-inondation : Des petits gestes comme dégager les gouttières, protéger les ouvertures et installer des clapets anti-retour peuvent prévenir de gros dégâts en évitant les refoulements d’eau.
+              </p>
+              <p className='Inondation'>
+                Savoir où aller : En cas d’évacuation, dirigez-vous vers les hauteurs et éloignez-vous des zones à risques. Une zone de sécurité peut se situer à seulement quelques centaines de mètres mais faire une grande différence.
+              </p>
             </div>
           )}
           {selectedRisk === "feu" && (
