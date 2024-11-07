@@ -137,4 +137,11 @@
   .Bas-Page button:hover {
     background-color: #45a049; /* Changer la couleur de fond du bouton au survol */
   }
-  
+
+  /* Style pour surligner les informations importantes */
+  .highlight {
+    background-color: #ffeb3b; /* Jaune clair pour mettre en évidence */
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }

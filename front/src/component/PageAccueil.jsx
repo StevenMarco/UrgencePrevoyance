@@ -37,7 +37,9 @@ function PageAccueil() {
           transition={{ duration: 1.5, delay: 0.2 }} // Durée et délai ajustés
         >
           <Counter endValue={1500} />
-          <p>Le nombre de tremblements de terre en France est de 1500 en moyenne chaque année avec le sud-est comme région la plus touchée. Cela représente 5 tremblements de terre par jour en France.</p>
+          <p>
+            Le nombre de <span className="highlight">tremblements de terre</span> en France est de <span className="highlight">1500</span> en moyenne chaque année avec le sud-est comme région la plus touchée. Cela représente <span className="highlight">5 tremblements de terre par jour</span> en France.
+          </p>
         </motion.div>
 
         <motion.div
@@ -48,7 +50,9 @@ function PageAccueil() {
           transition={{ duration: 1.5, delay: 0.4 }} // Durée et délai ajustés
         >
           <Counter endValue={18500000} />
-          <p>En 2019, environ 18,5 millions de personnes (soit 27,4 % de la population française) résident dans une zone potentiellement inondable (débordement de cours d’eau et/ou submersion marine).</p>
+          <p>
+            En 2019, environ <span className="highlight">18,5 millions</span> de personnes (soit <span className="highlight">27,4 %</span> de la population française) résident dans une <span className="highlight">zone potentiellement inondable</span> (débordement de cours d’eau et/ou submersion marine).
+          </p>
         </motion.div>
 
         <motion.div
@@ -59,7 +63,9 @@ function PageAccueil() {
           transition={{ duration: 1.5, delay: 0.6 }} // Durée et délai ajustés
         >
           <Counter endValue={63000} />
-          <p>63 000 mouvements de terrain recensés entre 1900 et 2020 (BRGM/BDMVT).</p>
+          <p>
+            <span className="highlight">63 000</span> <span className="highlight">mouvements de terrain</span> recensés entre <span className="highlight">1900 et 2020</span> (BRGM/BDMVT).
+          </p>
         </motion.div>
       </div>
       <div className="Bas-Page">
