@@ -217,6 +217,7 @@ const ArticleMap = () => {
 
   return (
     <>
+    <h1 style={{paddingTop: "100px"}}>Cherchez votre localisation</h1>
     <div
       style={{
         display: "flex",
