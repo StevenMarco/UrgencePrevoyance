@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import MapComponent from "./mapComponent";
-import InputAddress from "./inputAddress";
 import "./articleMap.css";
 
 const ArticleMap = () => {
@@ -65,7 +64,7 @@ const ArticleMap = () => {
       <h1 className="article-map-title">Titre de la Carte</h1>
 
       <div className="input-container">
-        <InputAddress />
+        {/* <InputAddress /> */}
       </div>
 
       <div className="map-and-info">
