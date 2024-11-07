@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/*//////////// HEADER /////////*/
+.header_partenaires{
+    border: solid 1px black;
+    background-color: pink;
+    height: 150px;
+    padding : 10px;
+    padding-bottom: 25px;
+    font-family: 'Montserrat';
+}
+.cadre1{
+    background-color: rgb(158, 53, 53);
+    justify-content: center; 
+    height: 50px;
+    width: 180px;
+    padding: 10px;
+}
+.cadre1 h3{
+    color: white;
+    font-weight: bolder;
+}
+.cadre2 {
+    width: 400px;
+    position : absolute;
+    bottom : 50px;
+    left : 300px;
+    justify-content: center;
+    padding: 0px;
+}
+.cadre3{
+    background-color: rgb(113, 110, 110);
+    color: white;
+    width: 500px;
+    position: absolute;
+    justify-content: center;
+}
+
+
+/*/////////////////////*/
+colones {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    color: #b25c5c;
+    padding:25px;
+}
+/*/////////////////////*/
