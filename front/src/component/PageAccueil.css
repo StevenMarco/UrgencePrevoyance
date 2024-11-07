@@ -4,6 +4,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+  
+.Titre img {
+    width: 150px; /* Largeur maximale du logo */
+    height: auto; /* Hauteur ajustée automatiquement pour conserver le ratio */
+    max-width: 100%; /* Empêche le logo de dépasser son conteneur */
+  }
+
+/* Bandeau pour le sous-titre */
+.Sous-titre {
+    background-color: rgba(40, 73, 105, 0.2); /* Couleur de fond du bandeau */
+    padding: 20px; /* Espace intérieur pour aérer */
+    text-align: center; /* Centrer le texte */
+    font-size: 1.5rem;
+    border-radius: 8px; /* Coins légèrement arrondis pour adoucir */
+    margin: 20px 0; /* Espacement autour du bandeau */
+  }
+  
+  .Sous-titre p {
+    text-decoration: underline;
+  }
+  
+  .Sous-titre h3 {
+    margin: 0; /* Supprime les marges pour que le titre reste bien centré */
+    color: #333; /* Couleur du texte pour un bon contraste */
+  }
+  
+  .Sous-titre p {
+    margin: 5px 0 0; /* Espace entre le titre et le paragraphe */
+    color: #555; /* Couleur plus douce pour le paragraphe */
   }
   
 .Corps {
@@ -13,11 +43,30 @@
     padding: 20px;
     width: 100%; 
 }
+
+/* Style pour les blocs de statistiques */
+.Corps div {
+    background-color: #f9f9f9; /* Couleur de fond du cadre */
+    border: 1px solid #ddd; /* Bordure légère */
+    padding: 20px; /* Espace intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+    width: 30%; /* Ajuste la largeur pour un alignement en ligne */
+    /* margin: 0 10px;  */
+  }
+  
+  /* Centrage de l’ensemble des blocs dans le container */
+  .Corps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
   
 
  .tremblements {
-    font-size: 1.2rem;
-    margin-top: 80px;
+    font-size: 1rem;
+    margin-top: 60px;
     /* font-weight:lighter; */
     width: 30%; 
 
@@ -25,7 +74,7 @@
   
 .inondable {
     text-align: center; 
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* font-weight:lighter; */
     width: 30%; 
   }
@@ -33,7 +82,7 @@
 
  .mouvement_de_terrain {
     /* font-weight:lighter; */
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 80px; 
     width: 30%; 
   }
