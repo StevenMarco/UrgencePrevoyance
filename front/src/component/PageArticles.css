@@ -14,10 +14,10 @@
     margin-bottom: 20px;
 }
 
-.Paragraphe p {
-    font-size: 1.5em;
+.Paragraphe h1 {
+    font-size: 3em;
     text-align: center;
-    color: #E8E8E8;
+    color: #000000;
     margin-bottom: 30px;
 }
 
@@ -74,13 +74,37 @@
 .Inondation, .Incendies, .Seisme {
     margin-bottom: 20px;
     padding: 15px;
-    border-left: 4px solid #FFD700; /* Une couleur de séparation dorée */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
 
-h2 {
+.Inondation {
+    border-left: 4px solid #FFD700; 
+}
+
+.Incendies {
+    border-left: 4px solid #272727;
+}
+
+.Seisme {
+    border-left: 4px solid #478319; 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Inondation h2 {
     color: #FFD700;
+}
+
+.Incendies h2 {
+    color: #272727;
+}
+
+.Seisme h2 {
+    border-left: 4px solid #478319; 
+    color: #478319;
+}
+
+h2 {
     font-size: 1.5em;
     margin-top: 10px;
 }

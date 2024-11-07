@@ -80,7 +80,7 @@ function PageArticles() {
             <div className="fadeIn">
               <h1 className='Incendies'>Les incendies</h1>
               <h2 className='Incendies'>Il peut y avoir plusieurs causes d'incendies</h2>
-              <p className='Incendie'>
+              <p className='Incendies'>
                 La majorité des incendies sont d'origine humaine, qu'ils soient accidentels (négligence, travaux agricoles, feux de camp) ou volontaires (actes de pyromanie).
                 Les incendies sont principalement causés par :
                 <ul>
