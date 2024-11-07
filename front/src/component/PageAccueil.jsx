@@ -32,8 +32,7 @@ function	PageAccueil(){
 			</div>
 			<div className='Bas-Page'>
 				<p>connaître les risques, informer, éduquer, surveiller, prévoir, réduire la vulnérabilité, protéger, se préparer à la crise, exploiter le retour d’expérience et responsabiliser.</p>
-        		  <button onClick={handleClick}>Quizz!</button>
-
+		 		  <button onClick={handleClick}>Quizz!</button>
 			</div>
 		</div>
 		);

@@ -1,7 +1,10 @@
 import React from "react";
 import "./partenaires.css";
-import logo from "../assets/logopompier.png";
-import logo2 from "../assets/logo2.png";
+import logo from "../assets/logopompier2.png";
+import logo2 from "../assets/logopolice.jpg";
+import logo3 from "../assets/logosamu.jpg";
+const	handleClick = () => {navigate('/Quiz')}
+
 
 const PagePartenaires = () => {
   
@@ -45,7 +48,7 @@ const PagePartenaires = () => {
                     </div>
                 </div>
                 <div className="zone_num" id="num2">
-                    <p className="name"> . Police </p>
+                    <p className="name"> Police </p>
                     <p className="num">17</p>
                     <div className="img">
                         <img src={logo2} alt="policeimg"></img>c
@@ -57,7 +60,9 @@ const PagePartenaires = () => {
                 <div className="zone_num" id="num3">
                     <p className="name"> . SAMU </p>
                     <p className="num">15</p>
-                    <div className="img"></div>
+                    <div className="img">
+                        <img src={logo3} alt="samuimg"></img>
+                    </div>
                     <div className="desc">
                         <p>A contacter si : Malaise, Blessures importantes, Crise médicale, Besoin d'Ambulance. </p>
                     </div>
@@ -134,20 +139,20 @@ const PagePartenaires = () => {
                     <button type="submit" className="btn"> Chauffage </button>
                 </div>
                 <div className="assistance" id="cas3"> 
-                    <a href="https://www.topizy.fr/content/22-plomberie" 
-                    target="_blank">Plomberie</a>
+                    <button type="submit" className="btn"><a href="https://www.topizy.fr/content/22-plomberie" 
+                    target="_blank">Plomberie</a></button>
                 </div>
                 <div className="assistance" id="cas4"> 
-                    <a href="https://www.topizy.fr/content/26-electro" 
-                    target="_blank">Eléctroménager</a>
+                    <button type="submit" className="btn"><a href="https://www.topizy.fr/content/26-electro" 
+                    target="_blank">Eléctroménager</a></button>
                 </div>
                 <div className="assistance" id="cas5"> 
-                    <a href="https://www.topizy.fr/content/24-serrurerie" 
-                    target="_blank">Serrurerie</a>
+                    <button type="submit" className="btn"><a href="https://www.topizy.fr/content/24-serrurerie" 
+                    target="_blank">Serrurerie</a></button>
                 </div>
                 <div className="assistance" id="cas6"> 
-                    <a href="https://www.topizy.fr/content/26-electro" 
-                    target="_blank">Eléctronique / Hi-tech</a>
+                    <button type="submit" className="btn"><a href="https://www.topizy.fr/content/26-electro" 
+                    target="_blank">Eléctronique / Hi-tech</a></button>
                 </div>
             </div>
         </div>
@@ -192,7 +197,7 @@ const PagePartenaires = () => {
         </div>
 
         <div className="ContactUs">
-            <button type="submit" className="btn">Nous Contactez</button>
+            <a href="http://localhost:5173/Contact" className="btn">Nous Contactez</a>
         </div>
 
     </div>

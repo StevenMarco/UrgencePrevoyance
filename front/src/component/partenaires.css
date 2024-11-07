@@ -1,6 +1,7 @@
 /* 1. Mise en page générale */
 .PagePartenaires {
     font-family: Arial, sans-serif;
+    border-radius: 16px;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7; /* Gris clair pour le fond */
@@ -172,6 +173,7 @@
   
   .btn:hover {
     background-color: #b71c1c; /* Rouge foncé au survol */
+    color: white; /* Texte des liens en blanc */
   }
   
   /* 6. Footer */
