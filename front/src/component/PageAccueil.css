@@ -4,111 +4,124 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    color: #000000; /* Black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-  
-.Titre img {
-    width: 150px; /* Largeur maximale du logo */
-    height: auto; /* Hauteur ajustée automatiquement pour conserver le ratio */
-    max-width: 100%; /* Empêche le logo de dépasser son conteneur */
-  }
 
-/* Bandeau pour le sous-titre */
+.Titre img {
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
+}
+
 .Sous-titre {
-    background-color: rgba(40, 73, 105, 0.2); /* Couleur de fond du bandeau */
-    padding: 20px; /* Espace intérieur pour aérer */
-    text-align: center; /* Centrer le texte */
+    background-color: rgba(25, 118, 210, 0.2); /* Light blue */
+    padding: 20px; 
+    text-align: center; 
     font-size: 1.5rem;
-    border-radius: 8px; /* Coins légèrement arrondis pour adoucir */
-    margin: 20px 0; /* Espacement autour du bandeau */
-  }
-  
-  .Sous-titre p {
+    border-radius: 15px;
+    margin: 20px 0;
+    color: #000000; /* Black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Sous-titre p {
     text-decoration: underline;
-  }
-  
-  .Sous-titre h3 {
-    margin: 0; /* Supprime les marges pour que le titre reste bien centré */
-    color: #333; /* Couleur du texte pour un bon contraste */
-  }
-  
-  .Sous-titre p {
-    margin: 5px 0 0; /* Espace entre le titre et le paragraphe */
-    color: #555; /* Couleur plus douce pour le paragraphe */
-  }
-  
-.Corps {
+}
+
+.Sous-titre h3 {
+    margin: 0; 
+    color: #000000; /* Black */
+}
+
+.Sous-titre p {
+    margin: 5px 0 0; 
+    color: #000000; /* Black */
+}
+
+/* .Corps {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    width: 100%; 
+    width: 100%;
+    border-radius: 15px;
+    background-color: #3e3e3e;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Corps div {
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
+    padding: 20px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    margin: 0 10px;
+} */
+
+.Corps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%; 
 }
 
 /* Style pour les blocs de statistiques */
 .Corps div {
-    background-color: #f9f9f9; /* Couleur de fond du cadre */
-    border: 1px solid #ddd; /* Bordure légère */
-    padding: 20px; /* Espace intérieur */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
-    width: 30%; /* Ajuste la largeur pour un alignement en ligne */
-    /* margin: 0 10px;  */
-  }
-  
-  /* Centrage de l’ensemble des blocs dans le container */
-  .Corps {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  
+  background-color: #f9f9f9; /* Couleur de fond du cadre */
+  border: 1px solid #ddd; /* Bordure légère */
+  padding: 20px; /* Espace intérieur */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+  width: 30%; /* Ajuste la largeur pour un alignement en ligne */
+  /* margin: 0 10px;  */
+}
 
- .tremblements {
+/* Centrage de l’ensemble des blocs dans le container */
+.Corps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+
+.tremblements {
     font-size: 1rem;
     margin-top: 60px;
-    /* font-weight:lighter; */
-    width: 30%; 
+    width: 30%;
+}
 
-  }
-  
 .inondable {
     text-align: center; 
     font-size: 1rem;
-    /* font-weight:lighter; */
-    width: 30%; 
-  }
-  
+    width: 30%;
+}
 
- .mouvement_de_terrain {
-    /* font-weight:lighter; */
+.mouvement_de_terrain {
     font-size: 1rem;
     margin-top: 80px; 
-    width: 30%; 
-  }
-  
+    width: 30%;
+}
+
 .Corps p:first-child {
     font-size: 3rem;
     font-weight: bold;
-  }
+}
 
 .Corps p {
     font-size: 1.5em;
     text-align: center;
-    color: #0a0909;
+    color: #000000; /* Black */
     margin-bottom: 30px;
 }
 
-.Titre h3 {
-	font-size: 32px;
-}
-
-.Sous-titre p {
-	font-size: 16px;
-	color: #0a0909;
-}
-
-/* Style pour le bas de page */
 .Bas-Page {
     display: flex; /* Utilisation de flexbox pour aligner le contenu */
     justify-content: space-between; /* Espacement entre le texte et le bouton */

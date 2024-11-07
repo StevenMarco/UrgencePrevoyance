@@ -1,6 +1,7 @@
 /* Style pour le titre de la map */
 .article-map-title {
   margin-top: 100px;
+
 }
 
 .container-article-map {
@@ -46,9 +47,6 @@
   font-size: 1em;
   cursor: pointer;
 }
-
-
-
 /* Conteneur pour toutes les checklists */
 .checklist-container {
   margin-top: 70px;
