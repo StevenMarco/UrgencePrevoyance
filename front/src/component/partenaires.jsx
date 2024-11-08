@@ -33,7 +33,7 @@ const PagePartenaires = () => {
                     Prenez contact en cas d'urgence.
                 </p>
                 <div className="zone_num" id="num1">
-                    <p className="name"> . Pompier </p>
+                    <p className="name">Pompier</p>
                     <p className="num">18</p>
                     
                     <div className="desc">
@@ -42,7 +42,7 @@ const PagePartenaires = () => {
                     <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num2">
-                    <p className="name"> . Police </p>
+                    <p className="name">Police</p>
                     <p className="num">17</p>
                  
                     <div className="desc">
@@ -51,7 +51,7 @@ const PagePartenaires = () => {
                     <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num3">
-                    <p className="name"> . SAMU </p>
+                    <p className="name">SAMU</p>
                     <p className="num">15</p>
                    
                     <div className="desc">
@@ -60,7 +60,7 @@ const PagePartenaires = () => {
                     <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num4">
-                    <p className="name"> . Urgence Handicap - Par SMS -</p>
+                    <p className="name">Urgence Handicap - Par SMS -</p>
                     <p className="num">114</p>
                    
                     <div className="desc">
@@ -69,7 +69,7 @@ const PagePartenaires = () => {
                     <div className="img"></div>
                 </div>
                 <div className="zone_num" id="num5">
-                    <p className="name"> . Numéro d'Urgence Européen </p>
+                    <p className="name">Numéro d'Urgence Européen</p>
                     <p className="num">112</p>
                 
                     <div className="desc">
@@ -85,7 +85,7 @@ const PagePartenaires = () => {
                     Tenez vous informer de la situation.
                 </p>
                 <div className="radio">
-                    <p className="name"> . Station de Radio :</p>
+                    <p className="name">Station de Radio :</p>
                    
                     <div className="zone_radio" id="radio1"> 
                         <p className="name"> France Bleu Azur</p>
@@ -104,7 +104,7 @@ const PagePartenaires = () => {
                 
                 
                 <div className="liens">
-                    <p className="name"> . Liens Utiles :</p>
+                    <p className="name">Liens Utiles :</p>
                     
                     <div className="zone_lien" id="lien1"> 
                         <p className="name"> Préfecture des Alpes-Maritimes :</p>
