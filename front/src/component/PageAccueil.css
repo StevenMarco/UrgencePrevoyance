@@ -18,7 +18,7 @@
 }
 
 .Sous-titre {
-  background-color: #30475E; 
+  background: linear-gradient(135deg, #30475E, #6C63FF);
   padding: 20px; 
   text-align: center; 
   font-size: 1em;
@@ -87,7 +87,7 @@ width: 30%;
   margin-bottom: 30px;
 }
 
-.Bas-Page {
+/* .Bas-Page {
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -114,6 +114,52 @@ width: 30%;
 
 .Bas-Page button:hover {
   background-color: #45a049; 
+} */
+
+.Bas-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 30px 0;
+  background: linear-gradient(135deg, #30475E, #6C63FF);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Bas-Page p {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #FF5722;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
+}
+
+.cta-button:hover {
+  background-color: #E64A19;
+}
+
+.cta-button:active {
+  background-color: #D84315;
+}
+
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.6);
 }
 
 .highlight {

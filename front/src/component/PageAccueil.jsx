@@ -69,8 +69,22 @@ function PageAccueil() {
         </motion.div>
       </div>
       <div className="Bas-Page">
-        <p>Testez vos connaissances et celles de votre famille !</p>
-        <button onClick={handleClick}>Quizz!</button>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          Testez vos connaissances et celles de votre famille !
+        </motion.p>
+        <motion.button
+          onClick={handleClick}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          animate={{ y: [0, -5, 0], transition: { duration: 1, repeat: Infinity, repeatType: 'reverse' } }}
+          className="cta-button"
+        >
+          Quizz!
+        </motion.button>
       </div>
     </div>
   );
