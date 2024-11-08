@@ -164,7 +164,7 @@ background-image: url('../assets/sarah/QRqueen.png');
   margin-top: 10px;
 }
 
-p{
+.Corps, .body_partenaires p{
   color: black;
 }
 
