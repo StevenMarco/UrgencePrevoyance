@@ -52,7 +52,7 @@ function PageArticles() {
 
   return (
     <>
-      <h1 style={{paddingTop: "100px", paddingBottom: "20px"}}>Le saviez vous</h1>
+      <h1 style={{paddingTop: "40px"}}>Le saviez vous</h1>
       <div className="Page_Articles" style={{ backgroundColor }}>
       <div className="Paragraphe">
         {selectedRisk === null && (

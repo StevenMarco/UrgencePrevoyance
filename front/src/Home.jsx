@@ -21,7 +21,7 @@ function Home() {
   return (
     <div style={{ paddingTop: "80px" }}>
       <PageAccueil />
-      <div style={{ top: "10px", right: "10px", display:"flex", justifyContent:"space-around", alignItems:""}}>
+      <div style={{ marginTop : "40px",top: "10px", right: "10px", display:"flex", justifyContent:"space-around", alignItems:""}}>
         <button style={{width:"12em"}} onClick={() => scrollToRef(articlesRef)}>
           Scroll to Articles
         </button>
