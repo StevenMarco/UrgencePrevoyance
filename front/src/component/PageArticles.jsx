@@ -6,16 +6,10 @@ import imgSeisme from "../assets/seisme.jpg";
 
 function PageArticles() {
   const [backgroundColor, setBackgroundColor] = useState("#FFF");
-  const [selectedRisk, setSelectedRisk] = useState(null);  
-
-  useEffect(() => {
-    if (selectedRisk === null) {
-      setBackgroundColor("#E8E8E8");
-    }
-  });
+  const [selectedRisk, setSelectedRisk] = useState(null);  // Nouvel état pour suivre le risque sélectionné
 
   const handleClick = (type) => {
-    setSelectedRisk(type);  
+    setSelectedRisk(type);  // Mettre à jour l'état avec le type de risque sélectionné
     switch (type) {
       case "eau":
         setBackgroundColor("#30475E");
@@ -35,9 +29,9 @@ function PageArticles() {
     <div className="Page_Articles" style={{ backgroundColor }}>
       <div className='Paragraphe'>
         {selectedRisk === null && (
-          <h1>
+          <p>
             Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
-          </h1>
+          </p>
         )}
       </div>
 
@@ -79,10 +73,6 @@ function PageArticles() {
           {selectedRisk === "feu" && (
             <div className="fadeIn">
               <h1 className='Incendies'>Les incendies</h1>
-              <h2 className='Incendies'>Il peut y avoir plusieurs causes d'incendies</h2>
-              <p className='Incendies'>
-                La majorité des incendies sont d'origine humaine, qu'ils soient accidentels (négligence, travaux agricoles, feux de camp) ou volontaires (actes de pyromanie).
-                Les incendies sont principalement causés par :
               <h2 className='Incendies'>Les causes des incendies et les conseils de prévention</h2>
               <p className='Incendie'>
                 En France, la majorité des feux de forêt sont d'origine humaine, qu'ils soient accidentels (négligence, travaux agricoles, feux de camp) ou volontaires (actes de pyromanie). Les incendies peuvent se déclencher rapidement et se propager sous certaines conditions environnementales :

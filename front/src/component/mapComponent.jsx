@@ -142,6 +142,8 @@ const MapComponent = () => {
     <div
       style={{
         display: "flex",
+        // flexDirection: "column",
+        // flexWrap: "wrap",
         justifyContent: "center",
         alignItems: "center",
         height: "70vh",
