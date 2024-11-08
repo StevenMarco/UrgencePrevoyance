@@ -198,10 +198,14 @@ const PagePartenaires = () => {
             </div>
 
             <div className="Utile">
-                <p>Documents Utiles :</p>
+                <p>Jeux pour vos enfants :</p>
                 <a href='/Applications/Documents/Hackathon-24/UrgencePrevoyance/front/src/assets/sarah/protegeToi.pdf' className="lien_docs" id="1" target="_blank">Document PDF</a>
-                <a href="#" className="lien_docs" id="2">Docuement PDF</a>
-                <a href="#" className="lien_docs" id="3">Docuement PDF</a>
+                <a href="/src/assets/Prévention.pdf" className="lien_docs" id="2" target="_blank" rel="noopener noreferrer">
+                Document PDF
+                </a>
+                <a href="/src/assets/mots_fléchées.pdf" className="lien_docs" id="3" target="_blank" rel="noopener noreferrer">
+                Document PDF
+                </a>
                 </div>
 
             <div className="Quizz">
