@@ -1,7 +1,36 @@
 /* Style pour le titre de la map */
+.containerborder {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.containerborder .border {
+  width: 50%;
+  border-bottom: 3px solid #F05454;
+  position: relative;
+}
+
+.containerborder .border::before,
+.containerborder .border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.containertitle {
+  padding-top: 100px;
+}
+
 .article-map-title {
   margin-top: 100px;
-
 }
 
 .container-article-map {

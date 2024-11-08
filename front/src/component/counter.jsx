@@ -1,8 +1,21 @@
-// Counter.js
 import React, { useEffect, useState } from 'react';
 
 function Counter({ endValue, duration = 1000 }) {
   const [count, setCount] = useState(0);
+  const [fontSize, setFontSize] = useState('2rem'); // Default for larger screens
+
+  useEffect(() => {
+    const updateFontSize = () => {
+      const width = window.innerWidth;
+      setFontSize(width < 768 ? '1.5rem' : '2rem');
+    };
+
+    updateFontSize();
+    window.addEventListener('resize', updateFontSize);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('resize', updateFontSize);
+  }, []);
 
   useEffect(() => {
     let startTime = null;
@@ -22,7 +35,11 @@ function Counter({ endValue, duration = 1000 }) {
     requestAnimationFrame(animateCounter);
   }, [endValue, duration]);
 
-  return <p>{count.toLocaleString()}</p>;
+  return (
+    <p style={{ fontSize, fontWeight: 'bold', color: '#000' }}>
+      {count.toLocaleString()}
+    </p>
+  );
 }
 
 export default Counter;

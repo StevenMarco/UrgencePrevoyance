@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion'; // Importation de framer-motion
 import './PageAccueil.css';
-import logo from '../assets/Logo_UrgencePrevoyance2-removebg.png';
+import logo from '../assets/UrgencePrevoyance.png';
 import Counter from './counter';
 
 function PageAccueil() {
