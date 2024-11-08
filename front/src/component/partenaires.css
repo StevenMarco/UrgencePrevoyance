@@ -102,6 +102,15 @@
 #num5 .img{
   background-image: url('../assets/sarah/europe.png');
 }
+#t1{
+  display: block;
+  align-items: center;
+}
+#t1 .img{
+  width: 25%;
+  background-image: url('../assets/sarah/QRqueen.png');
+}
+
 
   /* 4. Cartes d'urgence et de communication */
   .zone_num, .zone_radio, .zone_lien, .reseau, .Utile, .Quizz, .Engagement{

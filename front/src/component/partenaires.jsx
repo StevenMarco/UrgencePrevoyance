@@ -140,9 +140,21 @@ const PagePartenaires = () => {
                 <p className="name"> Sapeurs Pompier des Alpes-Maritimes</p>
                 <p className="texte"> @SDIS06 </p>
             </div>
+
+            <div className="reseau" id="t1">
+                    <p className="name">Partage les bonnes pratique :</p>
+                    <p className="texte"> <a href="https://vm.tiktok.com/ZGdNjPGFU/" 
+                    target="_blank">Maître de la "Préparation"</a></p>
+                    <p className="texte"> <a href="https://vm.tiktok.com/ZGdNj9rNw/" 
+                    target="_blank">Les éléments</a></p>
+                </div>
+
+            
         </div>
 
-                </div>
+        
+
+        </div>
             </div>
 
             <div className="col3">
@@ -187,17 +199,18 @@ const PagePartenaires = () => {
 
             <div className="Utile">
                 <p>Documents Utiles :</p>
-                <a href="#" className="lien_docs" id="1">Document PDF</a>
+                <a href='/Applications/Documents/Hackathon-24/UrgencePrevoyance/front/src/assets/sarah/protegeToi.pdf' className="lien_docs" id="1" target="_blank">Document PDF</a>
                 <a href="#" className="lien_docs" id="2">Docuement PDF</a>
                 <a href="#" className="lien_docs" id="3">Docuement PDF</a>
                 </div>
 
-                <div className="Quizz">
-            <p>Quizz :</p>
-            <a href="http://localhost:5173/Quiz" className="lien_quizz" id="1">Quizz 1</a>
-            <a href="#" className="lien_quizz" id="2">Quizz 2</a>
-            <a href="#" className="lien_quizz" id="3">Quizz 3</a>
-        </div>
+            <div className="Quizz">
+                <p>Quizz :</p>
+                <a href="http://localhost:5173/Quiz" className="lien_quizz" id="1">Quizz 1</a>
+                <a href="#" className="lien_quizz" id="2">Quizz 2</a>
+                <a href="#" className="lien_quizz" id="3">Quizz 3</a>
+            </div>
+
             </div>
 
             
