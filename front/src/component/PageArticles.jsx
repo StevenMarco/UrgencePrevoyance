@@ -3,6 +3,7 @@ import './PageArticles.css';
 import imgEau from "../assets/Eau.jpg";
 import imgIncendie from "../assets/incendie.jpg";
 import imgSeisme from "../assets/seisme.jpg";
+import leftClick from "../assets/leftClick.png";
 
 function PageArticles() {
   const [backgroundColor, setBackgroundColor] = useState("#FFF");
@@ -34,25 +35,27 @@ function PageArticles() {
     <>
       <h1 style={{paddingTop: "100px", paddingBottom: "20px"}}>Le saviez vous</h1>
       <div className="Page_Articles" style={{ backgroundColor }}>
-        <div className="Paragraphe">
-          {selectedRisk === null && (
-            <p>
-              Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
-            </p>
-          )}
+      <div className="Paragraphe">
+        {selectedRisk === null && (
+          <p className="texteAvecImage">
+            Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
+            <span className="imageContainer">
+              <img src={leftClick} className="leftClick" alt="leftClick" />
+            </span>
+          </p>
+        )}
+      </div>
+      <div className="choix">
+        <div onClick={() => handleClick("eau")}>
+          <img src={imgEau} className="Inondation" alt="imgEau" />
         </div>
-
-        <div className="choix">
-          <div onClick={() => handleClick("eau")}>
-            <img src={imgEau} className="Inondation" alt="imgEau" />
-          </div>
-          <div onClick={() => handleClick("feu")}>
-            <img src={imgIncendie} className="Incendies" alt="imgIncendie" />
-          </div>
-          <div onClick={() => handleClick("terre")}>
-            <img src={imgSeisme} className="Seisme" alt="img_seisme" />
-          </div>
+        <div onClick={() => handleClick("feu")}>
+          <img src={imgIncendie} className="Incendies" alt="imgIncendie" />
         </div>
+        <div onClick={() => handleClick("terre")}>
+          <img src={imgSeisme} className="Seisme" alt="img_seisme" />
+        </div>
+      </div>
 
         {/* Bouton pour réduire ou afficher l'article */}
         {selectedRisk && (
