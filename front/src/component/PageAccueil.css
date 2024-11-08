@@ -71,28 +71,28 @@ width: 100%;
 }
 
 .Corps div {
-background-color: #f9f9f9; 
-border: 1px solid #ddd; 
-padding: 20px; 
-border-radius: 8px; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-width: 30%; 
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  width: 30%; 
+  height: 100%; /* Pour que chaque div remplisse l'espace vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.tremblements {
-  margin-top: 60px;
-  width: 30%;
-}
-
-.inondable {
-  text-align: center; 
-  width: 30%;
-}
-
+/* Suppression des marges individuelles pour un alignement uniforme */
+.tremblements,
+.inondable,
 .mouvement_de_terrain {
-  margin-top: 80px; 
   width: 30%;
+  margin-top: 0;
+  text-align: center;
 }
+
 
 .Corps p:first-child {
   font-size: 3rem;
