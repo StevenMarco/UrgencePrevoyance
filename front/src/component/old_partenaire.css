@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+.PagePartenaires{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*//////////// HEADER /////////*/
+.header_partenaires{
+    height: 110px;
+    padding : 10px;
+    padding-bottom: 0px;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cadre1{
+    background-color: rgb(158, 53, 53);
+    height: 50px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 16px;
+}
+.cadre1 h3{
+    color: white;
+    font-weight: bolder;
+}
+.cadre2 {
+    width: 400px;
+    height: 50px;
+}
+.cadre2 h1{
+    font-weight: bolder;
+}
+.cadre3{
+    background-color: rgb(113, 110, 110);
+    color: white;
+    width: 800px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*/////////////////////*/
+
+/*/////////////////////*/
+
+.colones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 550px;
+    padding: 10px;
+}
+.col1, .col2, .col3{
+    border: solid black 2px;
+    margin: 10px;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/*/////////////////////*/
+
+.titre{
+    color: black;
+    border-bottom: solid black;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.description{
+    border: solid black 2px;
+    height: 60px;
+    color: black;
+    background-color: lightgray;
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zone_num{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.name {
+    color: black;
+    text-align: left;
+    width: 100px;
+    border: solid pink 2px;
+    padding: 5px;
+}
+
+.num {
+    color: black;
+    width: 35px;
+    border: solid black 2px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.zone_num .img{
+    border: solid 2px rgb(0, 51, 255);
+    height: 30px;
+    width: 30px;
+}
+.desc p{
+    color: black;
+}
+/*/////////////////////*/
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.Utile{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Quizz{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reseaux{
+    border: solid black 2px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*/////////////////////*/
+
+.ContactUs{
+    border: solid black 2px;
+    padding: 0px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
