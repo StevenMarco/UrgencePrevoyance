@@ -110,25 +110,22 @@
 }
 
 .choix {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 5%;
-    justify-content: center;
-    margin-bottom: 40px;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .choix img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .choix img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .support {
