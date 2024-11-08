@@ -68,64 +68,33 @@
     border-radius: 15px;
 }
 
-.Paragraphe {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
 .Paragraphe p {
-  font-size: 1.5em;
-  color: #8f8f8f;
-  margin-bottom: 30px;
-  display: inline-block;
-} 
-
-.leftClick:hover {
-  transform: scale(1.1); /* Légère animation au survol */
-}
-
-.texteAvecImage {
-  display: inline-block;
-  position: relative;
-  font-size: 1.5em;
-  color: #8f8f8f;
-}
-
-.imageContainer {
-  display: inline-block;
-  margin-left: 8px; /* Espacement entre le texte et l'image */
-  vertical-align: middle;
-}
-
-.leftClick {
-  width: 25px;
-  height: auto;
-  position: relative;
-  top: 2px; /* Ajustement vertical pour l'alignement */
-  opacity: 0.8;
-  transition: transform 0.2s ease-in-out;
+    font-size: 1.5em;
+    text-align: center;
+    color: #8f8f8f;
+    margin-bottom: 30px;
 }
 
 .choix {
-  display: flex;
-  gap: 5%;
-  justify-content: center;
-  margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5%;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .choix img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .choix img:hover {
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .support {

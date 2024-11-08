@@ -1,33 +1,13 @@
 import React, { useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import './PageArticles.css';
 import imgEau from "../assets/Eau.jpg";
 import imgIncendie from "../assets/incendie.jpg";
 import imgSeisme from "../assets/seisme.jpg";
-import leftClick from "../assets/leftClick.png";
 
 function PageArticles() {
   const [backgroundColor, setBackgroundColor] = useState("#FFF");
   const [selectedRisk, setSelectedRisk] = useState(null);
   const [isArticleOpen, setIsArticleOpen] = useState(true); // Contrôle l'affichage de l'article
-  const choixRef = useRef(null);
-  const inView = useInView(choixRef, { triggerOnce: true, threshold: 0.1 });
-
-  // Animation de Framer Motion
-  const variants = {
-    initial: { scale: 0.9, opacity: 0 },
-    hover: { scale: 1.1, opacity: 1 },
-    tap: { scale: 0.95 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 1.5, // Durée plus longue
-        delay: 0.5, // Délai avant de commencer l'animation
-      },
-    },
-  };  
 
   const handleClick = (type) => {
     setSelectedRisk(type);
@@ -54,50 +34,25 @@ function PageArticles() {
     <>
       <h1 style={{paddingTop: "40px"}}>Le saviez vous</h1>
       <div className="Page_Articles" style={{ backgroundColor }}>
-      <div className="Paragraphe">
-        {selectedRisk === null && (
-          <p className="texteAvecImage">
-            Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
-            <span className="imageContainer">
-              <img src={leftClick} className="leftClick" alt="leftClick" />
-            </span>
-          </p>
-        )}
-      </div>
-      <div className="choix" ref={choixRef}>
-        <motion.div
-          onClick={() => handleClick("eau")}
-          initial="initial"
-          animate={inView ? "visible" : "initial"}
-          whileHover="hover"
-          whileTap="tap"
-          variants={variants}
-        >
-          <img src={imgEau} className="Inondation" alt="imgEau" />
-        </motion.div>
+        <div className="Paragraphe">
+          {selectedRisk === null && (
+            <p>
+              Connaissez-vous les 3 plus grands risques de catastrophes sur la région PACA ?
+            </p>
+          )}
+        </div>
 
-        <motion.div
-          onClick={() => handleClick("feu")}
-          initial="initial"
-          animate={inView ? "visible" : "initial"}
-          whileHover="hover"
-          whileTap="tap"
-          variants={variants}
-        >
-          <img src={imgIncendie} className="Incendies" alt="imgIncendie" />
-        </motion.div>
-
-        <motion.div
-          onClick={() => handleClick("terre")}
-          initial="initial"
-          animate={inView ? "visible" : "initial"}
-          whileHover="hover"
-          whileTap="tap"
-          variants={variants}
-        >
-          <img src={imgSeisme} className="Seisme" alt="imgSeisme" />
-        </motion.div>
-      </div>
+        <div className="choix">
+          <div onClick={() => handleClick("eau")}>
+            <img src={imgEau} className="Inondation" alt="imgEau" />
+          </div>
+          <div onClick={() => handleClick("feu")}>
+            <img src={imgIncendie} className="Incendies" alt="imgIncendie" />
+          </div>
+          <div onClick={() => handleClick("terre")}>
+            <img src={imgSeisme} className="Seisme" alt="img_seisme" />
+          </div>
+        </div>
 
         {/* Bouton pour réduire ou afficher l'article */}
         {selectedRisk && (
